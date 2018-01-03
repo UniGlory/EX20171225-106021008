@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 public class EX2017122402 {
-    public static void main(String args[]){
+     public static void main(String args[]){
         Scanner scn=new Scanner(System.in);
         int count []=new int[52];
         String str=scn.nextLine();
         int leng=str.length();
-        System.out.println(leng);
+        String data[]=str.split(" ");
+        int a=data.length;
+        System.out.println(a);
         for (int i=0;i<leng;i++){
             int val=str.charAt(i)-'a';
             if (val>=0 && val<=26){
@@ -22,8 +24,8 @@ public class EX2017122402 {
             if (count[i]>0){
                 if (i<26){
                     System.out.println((char)(97+i)+":"+count[i]);
-                }else {
-                    System.out.println((char)(65+i)+":"+count[i]);
+                }else{
+                    System.out.println((char)(65+i-26)+":"+count[i]);
                 }
             }
         }
